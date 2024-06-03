@@ -4,6 +4,7 @@ using MagicVilla_API.Datos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MagicVilla_API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240603214921_AlimentarTablaVilla")]
+    partial class AlimentarTablaVilla
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -71,39 +74,39 @@ namespace MagicVilla_API.Migrations
                             Id = 1,
                             Amenidad = "any",
                             Detalle = "Detalle de la villa 1",
-                            FechaActualizacion = new DateTime(2024, 6, 3, 16, 53, 15, 385, DateTimeKind.Local).AddTicks(4553),
-                            FechaCreacion = new DateTime(2024, 6, 3, 16, 53, 15, 385, DateTimeKind.Local).AddTicks(4539),
+                            FechaActualizacion = new DateTime(2024, 6, 3, 16, 49, 21, 54, DateTimeKind.Local).AddTicks(6476),
+                            FechaCreacion = new DateTime(2024, 6, 3, 16, 49, 21, 54, DateTimeKind.Local).AddTicks(6462),
                             ImagenUrl = "",
                             MetrosCuadrados = 50,
                             Nombre = "Villa 1",
                             Ocupantes = 5,
-                            Tarifa = 200.0
+                            Tarifa = 0.0
                         },
                         new
                         {
                             Id = 2,
                             Amenidad = "any",
                             Detalle = "Detalle de la villa premium",
-                            FechaActualizacion = new DateTime(2024, 6, 3, 16, 53, 15, 385, DateTimeKind.Local).AddTicks(4559),
-                            FechaCreacion = new DateTime(2024, 6, 3, 16, 53, 15, 385, DateTimeKind.Local).AddTicks(4558),
+                            FechaActualizacion = new DateTime(2024, 6, 3, 16, 49, 21, 54, DateTimeKind.Local).AddTicks(6481),
+                            FechaCreacion = new DateTime(2024, 6, 3, 16, 49, 21, 54, DateTimeKind.Local).AddTicks(6480),
                             ImagenUrl = "",
                             MetrosCuadrados = 50,
                             Nombre = "Premium vista a la playa",
                             Ocupantes = 5,
-                            Tarifa = 150.0
+                            Tarifa = 0.0
                         },
                         new
                         {
                             Id = 3,
                             Amenidad = "any",
                             Detalle = "Detalle de la villa 3",
-                            FechaActualizacion = new DateTime(2024, 6, 3, 16, 53, 15, 385, DateTimeKind.Local).AddTicks(4563),
-                            FechaCreacion = new DateTime(2024, 6, 3, 16, 53, 15, 385, DateTimeKind.Local).AddTicks(4562),
+                            FechaActualizacion = new DateTime(2024, 6, 3, 16, 49, 21, 54, DateTimeKind.Local).AddTicks(6485),
+                            FechaCreacion = new DateTime(2024, 6, 3, 16, 49, 21, 54, DateTimeKind.Local).AddTicks(6484),
                             ImagenUrl = "",
                             MetrosCuadrados = 50,
                             Nombre = "Villa 3",
                             Ocupantes = 5,
-                            Tarifa = 200.0
+                            Tarifa = 0.0
                         });
                 });
 #pragma warning restore 612, 618
