@@ -1,0 +1,2 @@
+add-migration AgregarBaseDatos //Ser lo mas especifico posible
+update-database
