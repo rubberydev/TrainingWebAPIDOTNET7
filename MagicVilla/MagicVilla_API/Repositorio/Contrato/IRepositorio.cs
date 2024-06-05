@@ -8,7 +8,7 @@ namespace MagicVilla_API.Repositorio.Contrato
 
         Task<List<T>> ObtenerTodos(Expression<Func<T,bool>>? filtro = null);
 
-        Task<List<T>> Obtener(Expression<Func<T, bool>>? filtro = null, bool tracked = true);
+        Task<T> Obtener(Expression<Func<T, bool>>? filtro = null, bool tracked = true);
 
         Task Remover(T entidad);
 
