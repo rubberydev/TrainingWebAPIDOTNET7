@@ -112,8 +112,8 @@ namespace MagicVilla_API.Controllers
                 }
 
                 Villa modelo = _mapper.Map<Villa>(crearDTO);
-
-
+                modelo.FechaCreacion = DateTime.Now;
+                modelo.FechaActualizacion = DateTime.Now;
                 await _villaRepo.Crear(modelo);
                 _response.Resultado = modelo;
                 _response.statusCode = HttpStatusCode.Created;
@@ -196,8 +196,13 @@ namespace MagicVilla_API.Controllers
             var villa = await _villaRepo.Obtener(v => v.Id == id,tracked:false);
             
             VillaUpdateDTO villaDto = _mapper.Map<VillaUpdateDTO>(villa);
-           
-            if (villa == null) return BadRequest();
+
+            if (villa == null) 
+            {
+                _response.statusCode = HttpStatusCode.BadRequest;
+                _response.EsExitoso = false;
+                return BadRequest(_response);
+            }
             patchDto.ApplyTo(villaDto, ModelState);
 
             if (!ModelState.IsValid)
